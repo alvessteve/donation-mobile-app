@@ -8,7 +8,7 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint . --ext .ts,.tsx",
-    "lint-diff": "eslint --ext .js,.jsx,.ts,.tsx $FILES",
+    "lint-diff": "eslint --ext .ts,.tsx $FILES",
     "deps": "depcruise --config .dependency-cruiser.js src",
     "tsc": "npx tsc"
   },
