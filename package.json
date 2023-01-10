@@ -9,6 +9,7 @@
     "test": "jest",
     "lint": "eslint . --ext .ts,.tsx",
     "lint-diff": "eslint --ext .js,.jsx,.ts,.tsx $FILES",
+    "deps": "depcruise --config .dependency-cruiser.js src",
     "tsc": "npx tsc"
   },
   "dependencies": {
@@ -30,6 +31,7 @@
     "@typescript-eslint/eslint-plugin": "^5.48.1",
     "@typescript-eslint/parser": "^5.37.0",
     "babel-jest": "^26.6.3",
+    "dependency-cruiser": "^12.4.0",
     "eslint": "^8.31.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.0.0",
