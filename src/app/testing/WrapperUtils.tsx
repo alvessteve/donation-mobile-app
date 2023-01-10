@@ -1,12 +1,13 @@
-import React, {ReactElement} from 'react';
+import React, { ReactElement } from 'react';
 import IntlProvider from '../i18n/IntlProvider';
-import {Translations} from '../i18n/Translations';
+import { Translations } from '../i18n/Translations';
 
-export const createWrapper = (translations?: Partial<Translations>) =>
-  function Wrapper({children}: {children: ReactElement}) {
-    return (
-      <IntlProvider overriddenTranslations={translations}>
-        {children}
-      </IntlProvider>
-    );
-  };
+export const createWrapper = (translations?: Partial<Translations>) => function Wrapper({ children }: { children: ReactElement }) {
+  return (
+    <IntlProvider overriddenTranslations={translations}>
+      {children}
+    </IntlProvider>
+  );
+};
+
+export default createWrapper;

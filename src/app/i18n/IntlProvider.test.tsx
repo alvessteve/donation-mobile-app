@@ -1,8 +1,8 @@
 import React from 'react';
-import {render, renderHook, screen} from '@testing-library/react-native';
-import {Text} from 'react-native';
-import {createWrapper} from '../testing/WrapperUtils';
-import {Translation, useIntl} from './IntlProvider';
+import { render, renderHook, screen } from '@testing-library/react-native';
+import { Text } from 'react-native';
+import { createWrapper } from '../testing/WrapperUtils';
+import { Translation, useIntl } from './IntlProvider';
 
 describe('Intl module', () => {
   describe('Translation hook', () => {
@@ -54,7 +54,7 @@ describe('Intl module', () => {
         <Text>
           <Translation
             id="profile.title"
-            values={{message: 'here is my value'}}
+            values={{ message: 'here is my value' }}
           />
         </Text>,
         {
