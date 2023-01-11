@@ -1,12 +1,12 @@
 import React from 'react';
-import { Text, View } from 'react-native';
-import { Translation } from './i18n/IntlProvider';
+import IntlProvider from './i18n/IntlProvider';
+import NotSignedUpScreen from '../views/screens/sign/NotSignedUp';
 
 function App() {
   return (
-    <View>
-      <Text><Translation id="profile.title" /></Text>
-    </View>
+    <IntlProvider>
+      <NotSignedUpScreen />
+    </IntlProvider>
   );
 }
 
