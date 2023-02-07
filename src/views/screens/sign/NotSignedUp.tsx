@@ -12,6 +12,7 @@ export default function NotSignedUpScreen() {
     }}
     >
       <Typography type="h1"><Translation id="profile.title" /></Typography>
+      <Typography type="h2"><Translation id="profile.title" /></Typography>
     </SafeAreaView>
   );
 }
