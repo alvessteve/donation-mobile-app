@@ -1,5 +1,7 @@
 import React, { ReactNode } from 'react';
-import { StyleSheet, Text } from 'react-native';
+import {
+  StyleProp, StyleSheet, Text, TextStyle,
+} from 'react-native';
 import { Theme } from '../theme/stylesheet';
 import { useTheme } from '../theme/ThemeContext';
 
@@ -22,10 +24,12 @@ const TypographyStyle = (theme: Theme) => StyleSheet.create({
   },
 });
 
-export default function Typography({ children, type }: { children: ReactNode, type?: 'h1' | 'h2' }) {
+type TypographyType = { children: ReactNode, type?: 'h1' | 'h2', style?: StyleProp<TextStyle> };
+
+export default function Typography({ children, type, style }: TypographyType) {
   const theme = useTheme();
   return (
-    <Text style={TypographyStyle(theme)[type!]}>
+    <Text style={[TypographyStyle(theme)[type!], style]}>
       {children}
     </Text>
   );
@@ -33,4 +37,5 @@ export default function Typography({ children, type }: { children: ReactNode, ty
 
 Typography.defaultProps = {
   type: 'default',
+  style: {},
 };
