@@ -7,7 +7,7 @@ export const useIntl = () => {
   const intl = useBaseIntl();
 
   return {
-    translation: (id: TranslationsKeys, values: Record<string, string | ((str: string) => ReactElement)> = {}): string => intl.formatMessage({ id }, values as Record<string, PrimitiveType | FormatXMLElementFn<string, string>>),
+    translation: (id: TranslationsKeys, values?: Record<string, string | ((str: string) => ReactElement)>): string => intl.formatMessage({ id }, values as Record<string, PrimitiveType | FormatXMLElementFn<string, string>>),
   };
 };
 
