@@ -4,7 +4,7 @@ type LightColorThemeVariantType = Record<ColorThemesNamesWithVariant, VariantCol
 type LightColorThemeType = Record<ColorThemesNames, ColorValueRgb>;
 
 export type ThemeVariant = 'primary' | 'secondary';
-type ColorNames = 'curiousBlue' | 'nobel' | 'viking' | 'white';
+type ColorNames = 'curiousBlue' | 'nobel' | 'viking' | 'white' | 'black';
 
 /**
  * NB: we could restrict the ColorValueRgb type with the NumberRange type which restricts the boundary to 255 by a tail recursive type
@@ -23,6 +23,7 @@ export const colorPalette: Record<ColorNames, ColorValueRgb> = {
   nobel: 'rgb(155,155,155)',
   viking: 'rgb(75,192,185)',
   white: 'rgb(255,255,255)',
+  black: 'rgb(0,0,0)',
 };
 
 const lightColorThemeWithVariant = {
@@ -33,6 +34,8 @@ const lightColorThemeWithVariant = {
 const lightColorTheme = {
   title: colorPalette.curiousBlue,
   subTitle: colorPalette.nobel,
+  background: colorPalette.white,
+  defaultText: colorPalette.black,
 };
 
 export const themeValues = { ...lightColorTheme, ...lightColorThemeWithVariant } as Theme;
