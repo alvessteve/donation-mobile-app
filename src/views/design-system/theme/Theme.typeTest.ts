@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import {
-  ColorValueRgb, Theme, ThemeVariant, VariantColor,
+  ColorValueRgb, ComponentsWithVariantColorPalette, Theme, ThemeVariant,
 } from './stylesheet';
 
 // @ts-expect-error
@@ -16,7 +16,7 @@ const wrongHexaColor: ColorValueRgb = 'FFF';
 const wrongVariantTheme: ThemeVariant = 'rgb(61,139,190)';
 
 // @ts-expect-error
-const wrongThemeVariant: VariantColor = { tertiary: 'rgb(61,139,190)' };
+const wrongThemeVariant: ComponentsWithVariantColorPalette = { tertiary: 'rgb(61,139,190)' };
 
 // @ts-expect-error
-const wrongColorFormat: VariantColor = { primary: 'rgb(61,139,190)' };
+const wrongColorFormat: ComponentsWithVariantColorPalette = { primary: 'rgb(61,139,190)' };

@@ -5,26 +5,25 @@ import {
 import { Theme } from '../theme/stylesheet';
 import { useTheme } from '../theme/ThemeContext';
 
-export const fontSize = {
-  h1: 25,
-  h2: 16,
-};
-
 const TypographyStyle = (theme: Theme) => StyleSheet.create({
   default: {
-    color: theme.defaultText,
+    color: theme.components.stale.defaultText,
   },
   h1: {
-    color: theme.title,
-    fontSize: fontSize.h1,
+    color: theme.components.stale.title,
+    fontSize: theme.typography.fontSize.h1,
   },
   h2: {
-    color: theme.subTitle,
-    fontSize: fontSize.h2,
+    color: theme.components.stale.subTitle,
+    fontSize: theme.typography.fontSize.h2,
   },
 });
 
-type TypographyType = { children: ReactNode, type?: 'h1' | 'h2', style?: StyleProp<TextStyle> };
+type TypographyType = {
+  children: ReactNode,
+  type?: 'h1' | 'h2',
+  style?: StyleProp<TextStyle>
+};
 
 export default function Typography({ children, type, style }: TypographyType) {
   const theme = useTheme();
