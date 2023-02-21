@@ -1,5 +1,12 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
+for file in $(git diff --cached --name-only); do
+  if [[ "$file" =~ ^\.github/(workflows|actions)/.*\.yml$ ]]; then
+    echo "==> action-validator $file..."
+    action-validator "$file"
+  fi
+done
+
 export FILES=$(git diff --name-only --diff-filter=ACMRT HEAD -- "*.ts" "*.tsx" "*.js" "*.jsx"| xargs)
 yarn lint-diff
