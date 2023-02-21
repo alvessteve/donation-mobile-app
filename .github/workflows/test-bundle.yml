@@ -11,31 +11,31 @@ jobs:
         with:
           node-version: '18'
       - run: yarn install
-      - name: Cache node modules
-          id: cache-npm
-          uses: actions/cache@v3
-          env:
-            cache-name: cache-node-modules
-          with:
-            path: '**/node_modules'
-            key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-            restore-keys: |
-              ${{ runner.os }}-build-${{ env.cache-name }}-
-              ${{ runner.os }}-build-
-              ${{ runner.os }}-
+      - name: Cache node modules test
+        id: cache-npm
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
 
   lint:
     runs-on: ubuntu-latest
     needs: install
     steps:
       - name: Cache node modules
-          id: cache-npm
-          uses: actions/cache@v3
-          env:
-            cache-name: cache-node-modules
-          with:
-            path: '**/node_modules'
-            key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+        id: cache-npm
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
       - run: yarn lint
 
   unit-tests:
@@ -43,13 +43,13 @@ jobs:
     needs: [ install ]
     steps:
       - name: Cache node modules
-          id: cache-npm
-          uses: actions/cache@v3
-          env:
-            cache-name: cache-node-modules
-          with:
-            path: '**/node_modules'
-            key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+        id: cache-npm
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
       - run: yarn test
 
   tsc:
@@ -57,13 +57,13 @@ jobs:
     needs: [ install ]
     steps:
       - name: Cache node modules
-          id: cache-npm
-          uses: actions/cache@v3
-          env:
-            cache-name: cache-node-modules
-          with:
-            path: '**/node_modules'
-            key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+        id: cache-npm
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
       - run: yarn tsc
 
   dependency-cruiser:
@@ -71,11 +71,11 @@ jobs:
     needs: [ install ]
     steps:
       - name: Cache node modules
-          id: cache-npm
-          uses: actions/cache@v3
-          env:
-            cache-name: cache-node-modules
-          with:
-            path: '**/node_modules'
-            key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+        id: cache-npm
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
       - run: yarn deps
