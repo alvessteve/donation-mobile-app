@@ -1,0 +1,29 @@
+name: test-bundle
+
+on: [ push ]
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - run: yarn install
+  lint:
+    needs: install
+    steps:
+      - run: yarn lint
+  unit-tests:
+    needs: [ install ]
+    steps:
+      - run: yarn test
+  tsc:
+    needs: [ install ]
+    steps:
+      - run: yarn tsc
+  dependency-cruiser:
+    needs: [ install ]
+    steps:
+      - run: yarn deps
