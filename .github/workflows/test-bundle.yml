@@ -64,7 +64,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [ install ]
     steps:
-      - uses: actions/checkout@v3-
+      - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: '18'
@@ -82,7 +82,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [ install ]
     steps:
-      - uses: actions/checkout@v3-
+      - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: '18'
