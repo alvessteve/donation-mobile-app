@@ -1,7 +1,8 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-yarn test && yarn tsc && yarn deps
+npm-run-all test tsc deps
+
 
 
 
