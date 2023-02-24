@@ -12,7 +12,7 @@ type ColorPaletteType = Record<ColorNames, ColorValueRgbType>;
 type SizeKeys = 'extraSmall' | 'small' | 'medium' | 'large' | 'extraLarge';
 type SizeType = Record<SizeKeys, number>;
 
-type FontKeys = 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'caption';
+export type FontKeys = 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'caption';
 type FontType = Record<FontKeys, number>;
 
 type ComponentsTheme = typeof lightThemeComponents;

@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import {
   StyleProp, StyleSheet, Text, TextStyle,
 } from 'react-native';
-import { Theme } from '../theme/stylesheet';
+import { FontKeys, Theme } from '../theme/stylesheet';
 import { useTheme } from '../theme/ThemeContext';
 
 const TypographyStyle = (theme: Theme) => StyleSheet.create({
@@ -21,7 +21,7 @@ const TypographyStyle = (theme: Theme) => StyleSheet.create({
 
 type TypographyType = {
   children: ReactNode,
-  type?: 'h1' | 'h2',
+  type?: Extract<FontKeys, 'h1' | 'h2'>,
   style?: StyleProp<TextStyle>
 };
 
