@@ -5,54 +5,24 @@
  type Mapped<N extends number, Result extends Array<number> = []> = (Result['length'] extends N ? Result : Mapped<N, [...Result, Result['length']]>);
  type NumberRange = Mapped<RgbUpperLimit>[number];
  */
-export type ColorValueRgb = `rgb(${number},${number},${number})`;
-
-enum ComponentsWithState {
-  BUTTON = 'button',
-}
-
-type ComponentsWithoutVariantKeys = keyof typeof lightComponentColors;
-type ComponentsWithoutVariantColors = Record<ComponentsWithoutVariantKeys, ColorValueRgb>;
-
-export type ThemeVariant = 'primary' | 'secondary';
+export type ColorValueRgbType = `rgb(${number},${number},${number})`;
 type ColorNames = 'curiousBlue' | 'nobel' | 'viking' | 'white' | 'black';
-type States = 'pressed' | 'initial';
-type ComponentsPartsKeys = 'background' | 'label';
-type StatesColor = Record<States, ColorValueRgb>;
-type ComponentsParts = Record<ComponentsPartsKeys, StatesColor | ColorValueRgb>;
-export type ComponentsWithVariantColorPalette = Record<ThemeVariant, ComponentsParts>;
-type ThemeComponentsWithVariantType = Record<ComponentsWithState, ComponentsWithVariantColorPalette>;
-type ColorPaletteType = Record<ColorNames, ColorValueRgb>;
+type ColorPaletteType = Record<ColorNames, ColorValueRgbType>;
 
-enum SizeKey {
-  EXTRA_SMALL = 'extraSmall',
-  SMALL = 'small',
-  MEDIUM = 'medium',
-  LARGE = 'large',
-  EXTRA_LARGE = 'extraLarge',
-}
+type SizeKeys = 'extraSmall' | 'small' | 'medium' | 'large' | 'extraLarge';
+type SizeType = Record<SizeKeys, number>;
 
-export enum FontSizeKey {
-  P = 'p',
-  H1 = 'h1',
-  H2 = 'h2',
-  H3 = 'h3',
-  H4 = 'h4',
-  CAPTION = 'caption',
-}
+type FontKeys = 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'caption';
+type FontType = Record<FontKeys, number>;
 
-type Size = Record<SizeKey, number>;
-type FontSize = Record<FontSizeKey, number>;
+type ComponentsTheme = typeof lightThemeComponents;
 
 export type Theme = {
-  components: {
-    stated: ThemeComponentsWithVariantType,
-    stale: ComponentsWithoutVariantColors
-  },
+  components: ComponentsTheme,
   palette: ColorPaletteType,
   typography: {
-    size: Size,
-    fontSize: FontSize
+    size: SizeType,
+    fontSize: FontType
   }
 };
 
@@ -64,7 +34,12 @@ export const colorPalette: ColorPaletteType = {
   black: 'rgb(0,0,0)',
 };
 
-const lightThemeComponentsWithVariant: ThemeComponentsWithVariantType = {
+// act as a source of truth for the type to not have to declare each elements
+const lightThemeComponents = {
+  title: colorPalette.curiousBlue,
+  subTitle: colorPalette.nobel,
+  background: colorPalette.white,
+  defaultText: colorPalette.black,
   button: {
     primary: {
       background: {
@@ -83,14 +58,7 @@ const lightThemeComponentsWithVariant: ThemeComponentsWithVariantType = {
   },
 };
 
-const lightComponentColors = {
-  title: colorPalette.curiousBlue,
-  subTitle: colorPalette.nobel,
-  background: colorPalette.white,
-  defaultText: colorPalette.black,
-};
-
-export const size: Size = {
+export const size: SizeType = {
   extraSmall: 8,
   small: 12,
   medium: 16,
@@ -98,7 +66,7 @@ export const size: Size = {
   extraLarge: 41,
 };
 
-export const fontSize: FontSize = {
+export const fontSize: FontType = {
   p: 14,
   h1: 25,
   h2: 16,
@@ -108,10 +76,7 @@ export const fontSize: FontSize = {
 };
 
 const lightTheme: Theme = {
-  components: {
-    stated: lightThemeComponentsWithVariant,
-    stale: lightComponentColors,
-  },
+  components: lightThemeComponents,
   palette: colorPalette,
   typography: {
     size,

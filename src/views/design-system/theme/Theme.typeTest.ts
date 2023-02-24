@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import {
-  ColorValueRgb, ComponentsWithVariantColorPalette, Theme, ThemeVariant,
+  ColorValueRgbType, ComponentsWithVariantColorPalette, Theme, ThemeVariant,
 } from './stylesheet';
 
 // @ts-expect-error
@@ -10,7 +10,7 @@ const wrongThemeValue: Theme = { aColor: 'rgb(61,139,190)' };
 const wrongColorFormatOnTheme: Theme = { title: 'rgb(61,139,190)' };
 
 // @ts-expect-error
-const wrongHexaColor: ColorValueRgb = 'FFF';
+const wrongHexaColor: ColorValueRgbType = 'FFF';
 
 // @ts-expect-error
 const wrongVariantTheme: ThemeVariant = 'rgb(61,139,190)';
