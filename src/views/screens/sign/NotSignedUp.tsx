@@ -7,7 +7,7 @@ import { Theme } from '../../design-system/theme/stylesheet';
 
 const NotSignedUpScreenStyle = (theme: Theme) => StyleSheet.create({
   container: {
-    backgroundColor: theme.components.stale.background,
+    backgroundColor: theme.components.background,
     flex: 1,
   },
   title: {

@@ -7,14 +7,14 @@ import { useTheme } from '../theme/ThemeContext';
 
 const TypographyStyle = (theme: Theme) => StyleSheet.create({
   default: {
-    color: theme.components.stale.defaultText,
+    color: theme.components.defaultText,
   },
   h1: {
-    color: theme.components.stale.title,
+    color: theme.components.title,
     fontSize: theme.typography.fontSize.h1,
   },
   h2: {
-    color: theme.components.stale.subTitle,
+    color: theme.components.subTitle,
     fontSize: theme.typography.fontSize.h2,
   },
 });
