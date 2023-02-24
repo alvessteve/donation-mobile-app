@@ -1,6 +1,7 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
+# validate github workflows yaml
 for file in $(git diff --cached --name-only); do
   if [[ "$file" =~ ^\.github/(workflows|actions)/.*\.yml$ ]]; then
     echo "==> action-validator $file..."
@@ -8,5 +9,6 @@ for file in $(git diff --cached --name-only); do
   fi
 done
 
+# get change files and lint on them
 export FILES=$(git diff --name-only --diff-filter=ACMRT HEAD -- "*.ts" "*.tsx" "*.js" "*.jsx"| xargs)
 yarn lint-diff
