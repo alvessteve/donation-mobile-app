@@ -4,6 +4,7 @@ import { Translation } from '../../../app/i18n/IntlProvider';
 import Typography from '../../design-system/typography/Typography';
 import { useTheme } from '../../design-system/theme/ThemeContext';
 import { Theme } from '../../design-system/theme/stylesheet';
+import Button from '../../design-system/button/Button';
 
 const NotSignedUpScreenStyle = (theme: Theme) => StyleSheet.create({
   container: {
@@ -33,6 +34,12 @@ export default function NotSignedUpScreen() {
           id="profile.subtitle"
         />
       </Typography>
+      <Button
+        onPress={() => {
+          console.log('clicked');
+        }}
+        title={<Translation id="profile.button.login.label" />}
+      />
     </SafeAreaView>
   );
 }
