@@ -15,6 +15,8 @@ type SizeType = Record<SizeKeys, number>;
 export type FontKeys = 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'caption';
 type FontType = Record<FontKeys, number>;
 
+export type Variant = 'primary' | 'secondary';
+
 type ComponentsTheme = typeof lightThemeComponents;
 
 export type Theme = {
