@@ -1,5 +1,7 @@
 import React, { ReactNode } from 'react';
-import { Pressable, StyleSheet } from 'react-native';
+import {
+  Pressable, StyleProp, StyleSheet, ViewStyle,
+} from 'react-native';
 import { useTheme } from '../theme/ThemeContext';
 import { Theme, Variant } from '../theme/stylesheet';
 import Typography from '../typography/Typography';
@@ -7,29 +9,34 @@ import Typography from '../typography/Typography';
 const ButtonStyle = (theme: Theme, variant: Variant, pressed: boolean = false) => StyleSheet.create({
   container: {
     backgroundColor: pressed ? theme.components.button[variant].background.pressed : theme.components.button[variant].background.initial,
-    margin: 30,
     borderRadius: 10,
     borderWidth: 1,
-    borderColor: theme.components.button.primary.label,
+    borderColor: pressed ? theme.components.button[variant].background.initial : theme.components.button[variant].label,
     height: 50,
     alignItems: 'center',
     justifyContent: 'center',
   },
   label: {
-    color: theme.components.button.primary.label,
+    color: theme.components.button[variant].label,
   },
 });
 
 type ButtonProps = {
   title: ReactNode,
   onPress: () => void
-  variant?: Variant
+  variant?: Variant,
+  style?: StyleProp<ViewStyle>
 };
 
-export default function Button({ title, onPress, variant }: ButtonProps) {
+export default function Button({
+  title, onPress, variant, style,
+}: ButtonProps) {
   const theme = useTheme();
   return (
-    <Pressable onPress={onPress} style={({ pressed }) => ButtonStyle(theme, variant!, pressed).container}>
+    <Pressable
+      onPress={onPress}
+      style={({ pressed }) => [ButtonStyle(theme, variant!, pressed).container, style]}
+    >
       <Typography type="h2" style={ButtonStyle(theme, variant!).label}>
         {title}
       </Typography>
@@ -39,4 +46,5 @@ export default function Button({ title, onPress, variant }: ButtonProps) {
 
 Button.defaultProps = {
   variant: 'primary',
+  style: {},
 };
