@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { ColorValueRgbType, Theme } from './stylesheet';
-import { Equal, ExpectFalse } from '../../../../__tests__/type-utils';
+import { Equal, ExpectFalse } from '../../../../tests/type-utils';
 
 const wrongThemeValue = { aColor: 'rgb(61,139,190)' };
 
