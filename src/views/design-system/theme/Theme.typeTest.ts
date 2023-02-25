@@ -1,11 +1,16 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { ColorValueRgbType, Theme } from './stylesheet';
+import { Equal, ExpectFalse } from '../../../../__tests__/type-utils';
 
-// @ts-expect-error
-const wrongThemeValue: Theme = { aColor: 'rgb(61,139,190)' };
+const wrongThemeValue = { aColor: 'rgb(61,139,190)' };
 
-// @ts-expect-error
-const wrongColorFormatOnTheme: Theme = { title: 'rgb(61,139,190)' };
+const wrongColorFormatOnTheme = { title: 'rgb(61,139,190)' };
 
-// @ts-expect-error
-const wrongHexaColor: ColorValueRgbType = 'FFF';
+const wrongHexaColor = 'FFF';
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+type Tests = [
+  ExpectFalse<Equal<typeof wrongThemeValue, Theme>>,
+  ExpectFalse<Equal<typeof wrongColorFormatOnTheme, Theme>>,
+  ExpectFalse<Equal<typeof wrongHexaColor, ColorValueRgbType>>,
+];
