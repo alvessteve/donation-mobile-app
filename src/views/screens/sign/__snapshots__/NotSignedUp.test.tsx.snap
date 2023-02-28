@@ -1,0 +1,155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotSignedUp Page Rendering should display the page 1`] = `
+<RCTSafeAreaView
+  style={
+    Object {
+      "backgroundColor": "rgb(255,255,255)",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 3,
+      }
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "rgb(61,139,190)",
+            "fontSize": 25,
+          },
+          Object {
+            "margin": 30,
+          },
+        ]
+      }
+    >
+      Help contribute to impactful organisations
+    </Text>
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "rgb(155,155,155)",
+            "fontSize": 16,
+          },
+          Object {
+            "marginLeft": 30,
+            "marginRight": 30,
+          },
+        ]
+      }
+    >
+      Give to organizations and view all your favorited charities in one place.
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "justifyContent": "space-around",
+      }
+    }
+  >
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgb(255,255,255)",
+            "borderColor": "rgb(75,192,185)",
+            "borderRadius": 10,
+            "borderWidth": 1,
+            "height": 50,
+            "justifyContent": "center",
+          },
+          Object {
+            "marginLeft": 30,
+            "marginRight": 30,
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "rgb(155,155,155)",
+              "fontSize": 16,
+            },
+            Object {
+              "color": "rgb(75,192,185)",
+            },
+          ]
+        }
+      >
+        Log in
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgb(75,192,185)",
+            "borderColor": "rgb(255,255,255)",
+            "borderRadius": 10,
+            "borderWidth": 1,
+            "height": 50,
+            "justifyContent": "center",
+          },
+          Object {
+            "marginLeft": 30,
+            "marginRight": 30,
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "rgb(155,155,155)",
+              "fontSize": 16,
+            },
+            Object {
+              "color": "rgb(255,255,255)",
+            },
+          ]
+        }
+      >
+        Sign up
+      </Text>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
