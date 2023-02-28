@@ -60,6 +60,9 @@
       "jsx",
       "json",
       "node"
+    ],
+    "setupFiles": [
+      "<rootDir>/tests/jest.overrides.console.js"
     ]
   },
   "volta": {
