@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login Page Rendering should display the page 1`] = `
+<Text>
+  HELLO
+</Text>
+`;
