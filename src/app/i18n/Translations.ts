@@ -8,4 +8,5 @@ export const englishTranslations = {
         'Give to organizations and view all your favorited charities in one place.',
   'profile.button.login.label': 'Log in',
   'profile.button.signup.label': 'Sign up',
+  'login.header': 'Log in',
 };
