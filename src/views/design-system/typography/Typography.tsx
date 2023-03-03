@@ -6,9 +6,6 @@ import { FontKeys, Theme } from '../theme/stylesheet';
 import { useTheme } from '../theme/ThemeContext';
 
 const TypographyStyle = (theme: Theme) => StyleSheet.create({
-  default: {
-    color: theme.components.defaultText,
-  },
   h1: {
     color: theme.components.title,
     fontSize: theme.typography.fontSize.h1,
@@ -18,6 +15,7 @@ const TypographyStyle = (theme: Theme) => StyleSheet.create({
     fontSize: theme.typography.fontSize.h2,
   },
   p: {
+    color: theme.components.defaultText,
     fontSize: theme.typography.fontSize.p,
   },
 });
