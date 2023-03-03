@@ -12,7 +12,7 @@ export const useIntl = () => {
 };
 
 export default function IntlProvider(
-  { children, overriddenTranslations }: { children: ReactElement, overriddenTranslations?: Partial<Translations> },
+  { children, overriddenTranslations = {} }: { children: ReactElement, overriddenTranslations?: Partial<Translations> },
 ) {
   return (
     <BaseIntlProvider
@@ -25,14 +25,6 @@ export default function IntlProvider(
   );
 }
 
-IntlProvider.defaultProps = {
-  overriddenTranslations: {},
-};
-
-export function Translation({ id, values }: { id: TranslationsKeys, values?: Record<string, string> }) {
+export function Translation({ id, values = {} }: { id: TranslationsKeys, values?: Record<string, string> }) {
   return <FormattedMessage id={id} values={values} />;
 }
-
-Translation.defaultProps = {
-  values: {},
-};

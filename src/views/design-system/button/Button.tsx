@@ -29,7 +29,7 @@ type ButtonProps = {
 };
 
 export default function Button({
-  title, onPress, variant, style,
+  title, onPress, variant = 'primary', style = {},
 }: ButtonProps) {
   const theme = useTheme();
   return (
@@ -43,8 +43,3 @@ export default function Button({
     </Pressable>
   );
 }
-
-Button.defaultProps = {
-  variant: 'primary',
-  style: {},
-};

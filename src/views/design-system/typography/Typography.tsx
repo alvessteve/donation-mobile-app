@@ -17,15 +17,18 @@ const TypographyStyle = (theme: Theme) => StyleSheet.create({
     color: theme.components.subTitle,
     fontSize: theme.typography.fontSize.h2,
   },
+  p: {
+    fontSize: theme.typography.fontSize.p,
+  },
 });
 
 type TypographyType = {
   children: ReactNode,
-  type?: Extract<FontKeys, 'h1' | 'h2'>,
+  type?: Extract<FontKeys, 'h1' | 'h2' | 'p'>,
   style?: StyleProp<TextStyle>
 };
 
-export default function Typography({ children, type, style }: TypographyType) {
+export default function Typography({ children, type = 'p', style = {} }: TypographyType) {
   const theme = useTheme();
   return (
     <Text style={[TypographyStyle(theme)[type!], style]}>
@@ -33,8 +36,3 @@ export default function Typography({ children, type, style }: TypographyType) {
     </Text>
   );
 }
-
-Typography.defaultProps = {
-  type: 'default',
-  style: {},
-};
