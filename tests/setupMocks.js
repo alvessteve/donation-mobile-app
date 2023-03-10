@@ -1,5 +1,3 @@
-import 'react-native-gesture-handler/jestSetup';
-
 const mockedNavigate = jest.fn();
 
 jest.mock('@react-navigation/native', () => {
