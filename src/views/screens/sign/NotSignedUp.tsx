@@ -2,6 +2,7 @@ import { SafeAreaView, StyleSheet, View } from 'react-native';
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { LOGIN_SCREEN_ACTIVATE } from '@env';
 import { Translation } from '../../../app/i18n/IntlProvider';
 import Typography from '../../design-system/typography/Typography';
 import { useTheme } from '../../design-system/theme/ThemeContext';
@@ -41,6 +42,8 @@ export default function NotSignedUpScreen() {
   const theme = useTheme();
   const { navigate } = useNavigation<NativeStackNavigationProp<SignInUpStackScreens>>();
 
+  console.log(LOGIN_SCREEN_ACTIVATE);
+
   return (
     <SafeAreaView style={NotSignedUpScreenStyle(theme).container}>
       <View style={NotSignedUpScreenStyle(theme).titlesContainer}>
@@ -58,7 +61,10 @@ export default function NotSignedUpScreen() {
       <View style={NotSignedUpScreenStyle(theme).buttonContainer}>
         <Button
           style={NotSignedUpScreenStyle(theme).button}
-          onPress={() => navigate('Login')}
+          onPress={() => {
+            // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+            LOGIN_SCREEN_ACTIVATE ? navigate('Login') : null;
+          }}
           title={<Translation id="profile.button.login.label" />}
         />
         <Button

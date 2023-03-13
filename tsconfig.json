@@ -1,12 +1,13 @@
 // prettier-ignore
 {
   "extends": "@tsconfig/react-native/tsconfig.json",     /* Recommended React Native TSConfig base */
-  "include": [".eslintrc.js", "./src/**/*"],
+  "include": [".eslintrc.js", "./src/**/*", "babel.config.js"],
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
 
     /* Completeness */
     "skipLibCheck": true,                                 /* Skip type checking all .d.ts files. */
     "noImplicitAny": true,
+    "typeRoots": ["./src/env.d.ts"]
   }
 }
