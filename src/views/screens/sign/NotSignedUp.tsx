@@ -42,8 +42,6 @@ export default function NotSignedUpScreen() {
   const theme = useTheme();
   const { navigate } = useNavigation<NativeStackNavigationProp<SignInUpStackScreens>>();
 
-  console.log(LOGIN_SCREEN_ACTIVATE);
-
   return (
     <SafeAreaView style={NotSignedUpScreenStyle(theme).container}>
       <View style={NotSignedUpScreenStyle(theme).titlesContainer}>
