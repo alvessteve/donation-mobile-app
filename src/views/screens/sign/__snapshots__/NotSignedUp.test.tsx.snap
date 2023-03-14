@@ -3,7 +3,7 @@
 exports[`NotSignedUp Page Rendering should display the page 1`] = `
 <RCTSafeAreaView
   style={
-    Object {
+    {
       "backgroundColor": "rgb(255,255,255)",
       "flex": 1,
     }
@@ -11,19 +11,19 @@ exports[`NotSignedUp Page Rendering should display the page 1`] = `
 >
   <View
     style={
-      Object {
+      {
         "flex": 3,
       }
     }
   >
     <Text
       style={
-        Array [
-          Object {
+        [
+          {
             "color": "rgb(61,139,190)",
             "fontSize": 25,
           },
-          Object {
+          {
             "margin": 30,
           },
         ]
@@ -33,12 +33,12 @@ exports[`NotSignedUp Page Rendering should display the page 1`] = `
     </Text>
     <Text
       style={
-        Array [
-          Object {
+        [
+          {
             "color": "rgb(155,155,155)",
             "fontSize": 16,
           },
-          Object {
+          {
             "marginLeft": 30,
             "marginRight": 30,
           },
@@ -50,13 +50,30 @@ exports[`NotSignedUp Page Rendering should display the page 1`] = `
   </View>
   <View
     style={
-      Object {
+      {
         "flex": 1,
         "justifyContent": "space-around",
       }
     }
   >
     <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
       accessible={true}
       collapsable={false}
       focusable={true}
@@ -70,8 +87,8 @@ exports[`NotSignedUp Page Rendering should display the page 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Array [
-          Object {
+        [
+          {
             "alignItems": "center",
             "backgroundColor": "rgb(255,255,255)",
             "borderColor": "rgb(75,192,185)",
@@ -80,7 +97,7 @@ exports[`NotSignedUp Page Rendering should display the page 1`] = `
             "height": 50,
             "justifyContent": "center",
           },
-          Object {
+          {
             "marginLeft": 30,
             "marginRight": 30,
           },
@@ -89,12 +106,12 @@ exports[`NotSignedUp Page Rendering should display the page 1`] = `
     >
       <Text
         style={
-          Array [
-            Object {
+          [
+            {
               "color": "rgb(155,155,155)",
               "fontSize": 16,
             },
-            Object {
+            {
               "color": "rgb(75,192,185)",
             },
           ]
@@ -104,6 +121,23 @@ exports[`NotSignedUp Page Rendering should display the page 1`] = `
       </Text>
     </View>
     <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
       accessible={true}
       collapsable={false}
       focusable={true}
@@ -117,8 +151,8 @@ exports[`NotSignedUp Page Rendering should display the page 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Array [
-          Object {
+        [
+          {
             "alignItems": "center",
             "backgroundColor": "rgb(75,192,185)",
             "borderColor": "rgb(255,255,255)",
@@ -127,7 +161,7 @@ exports[`NotSignedUp Page Rendering should display the page 1`] = `
             "height": 50,
             "justifyContent": "center",
           },
-          Object {
+          {
             "marginLeft": 30,
             "marginRight": 30,
           },
@@ -136,12 +170,12 @@ exports[`NotSignedUp Page Rendering should display the page 1`] = `
     >
       <Text
         style={
-          Array [
-            Object {
+          [
+            {
               "color": "rgb(155,155,155)",
               "fontSize": 16,
             },
-            Object {
+            {
               "color": "rgb(255,255,255)",
             },
           ]
