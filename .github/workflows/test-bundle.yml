@@ -10,19 +10,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '18'
+          cache: 'yarn'
       - run: yarn install
-      - name: Cache node modules test
-        id: cache-npm
-        uses: actions/cache@v3
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: '**/node_modules'
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
 
   lint:
     runs-on: ubuntu-latest
@@ -32,14 +21,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '18'
-      - name: Cache node modules
-        id: cache-npm
-        uses: actions/cache@v3
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: '**/node_modules'
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          cache: 'yarn'
       - run: yarn lint
 
   unit-tests:
@@ -50,14 +32,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '18'
-      - name: Cache node modules
-        id: cache-npm
-        uses: actions/cache@v3
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: '**/node_modules'
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          cache: 'yarn'
       - run: yarn test
 
   tsc:
@@ -68,14 +43,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '18'
-      - name: Cache node modules
-        id: cache-npm
-        uses: actions/cache@v3
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: '**/node_modules'
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          cache: 'yarn'
       - run: yarn tsc
 
   dependency-cruiser:
@@ -86,12 +54,5 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '18'
-      - name: Cache node modules
-        id: cache-npm
-        uses: actions/cache@v3
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: '**/node_modules'
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          cache: 'yarn'
       - run: yarn deps
