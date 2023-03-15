@@ -10,8 +10,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '18'
-          cache: 'yarn'
-      - run: yarn install
+          cache: 'npm'
+      - run: npm ci
 
   lint:
     runs-on: ubuntu-latest
@@ -21,8 +21,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '18'
-          cache: 'yarn'
-      - run: yarn run lint
+          cache: 'npm'
+      - run: npx lint
 
   unit-tests:
     runs-on: ubuntu-latest
@@ -32,8 +32,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '18'
-          cache: 'yarn'
-      - run: yarn run test
+          cache: 'npm'
+      - run: npx test
 
   tsc:
     runs-on: ubuntu-latest
@@ -43,8 +43,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '18'
-          cache: 'yarn'
-      - run: yarn run tsc
+          cache: 'npm'
+      - run: npx tsc
 
   dependency-cruiser:
     runs-on: ubuntu-latest
@@ -54,5 +54,5 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '18'
-          cache: 'yarn'
-      - run: yarn run deps
+          cache: 'npm'
+      - run: npx deps
