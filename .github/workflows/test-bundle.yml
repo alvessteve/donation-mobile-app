@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: '18'
           cache: 'yarn'
-      - run: yarn lint
+      - run: yarn run lint
 
   unit-tests:
     runs-on: ubuntu-latest
@@ -33,7 +33,7 @@ jobs:
         with:
           node-version: '18'
           cache: 'yarn'
-      - run: yarn test
+      - run: yarn run test
 
   tsc:
     runs-on: ubuntu-latest
@@ -44,7 +44,7 @@ jobs:
         with:
           node-version: '18'
           cache: 'yarn'
-      - run: yarn tsc
+      - run: yarn run tsc
 
   dependency-cruiser:
     runs-on: ubuntu-latest
@@ -55,4 +55,4 @@ jobs:
         with:
           node-version: '18'
           cache: 'yarn'
-      - run: yarn deps
+      - run: yarn run deps
