@@ -1,58 +1,18 @@
-name: test-bundle
+name: CI
 
 on: [ push ]
 
 jobs:
-  install:
+  install-test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: '18'
-          cache: 'npm'
-      - run: npm install
-
-  lint:
-    runs-on: ubuntu-latest
-    needs: install
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-          cache: 'npm'
-      - run: npx lint
-
-  unit-tests:
-    runs-on: ubuntu-latest
-    needs: [ install ]
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-          cache: 'npm'
-      - run: npx test
-
-  tsc:
-    runs-on: ubuntu-latest
-    needs: [ install ]
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-          cache: 'npm'
-      - run: npx tsc
-
-  dependency-cruiser:
-    runs-on: ubuntu-latest
-    needs: [ install ]
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-          cache: 'npm'
-      - run: npx deps
+          cache: 'yarn'
+      - run: yarn install --frozen-lockfile
+      - run: yarn lint
+      - run: yarn test
+      - run: yarn tsc
+      - run: yarn deps
