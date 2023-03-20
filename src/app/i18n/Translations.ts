@@ -9,4 +9,6 @@ export const englishTranslations = {
   'profile.button.login.label': 'Log in',
   'profile.button.signup.label': 'Sign up',
   'login.header': 'Log in',
+  'login.email.label': 'Email',
+  'login.password.label': 'Password',
 };

@@ -1,8 +1,8 @@
 module.exports = {
   root: true,
-  extends: ['airbnb', 'airbnb-typescript', 'airbnb/hooks'],
+  extends: ['airbnb', 'airbnb-typescript', 'airbnb/hooks', 'plugin:jest-dom/recommended'],
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', 'jest-dom'],
   parserOptions: {
     project: './tsconfig.json',
   },
@@ -14,6 +14,7 @@ module.exports = {
         'react/require-default-props': [2, {
           functions: 'defaultArguments',
         }],
+        'jest-dom/prefer-in-document': 'off',
       },
     },
   ],

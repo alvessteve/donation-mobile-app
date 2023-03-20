@@ -10,7 +10,9 @@ exports[`Login Page Rendering should display the page 1`] = `
     }
   }
 >
-  <View>
+  <View
+    style={{}}
+  >
     <Text
       style={
         [
@@ -28,15 +30,95 @@ exports[`Login Page Rendering should display the page 1`] = `
     </Text>
     <TextInput
       placeholder=""
+      secureTextEntry={false}
       style={
-        {
-          "borderBottomColor": "rgb(211,211,211)",
-          "borderBottomWidth": 1,
-          "height": 40,
-          "width": "100%",
-        }
+        [
+          {
+            "borderBottomColor": "rgb(211,211,211)",
+            "borderBottomWidth": 1,
+            "height": 30,
+            "width": "100%",
+          },
+          {},
+        ]
       }
     />
+  </View>
+  <View
+    style={
+      {
+        "borderBottomColor": "rgb(211,211,211)",
+        "borderBottomWidth": 1,
+        "flexDirection": "row",
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      style={
+        {
+          "width": "90%",
+        }
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "rgb(0,0,0)",
+              "fontSize": 14,
+            },
+            {
+              "color": "rgb(211,211,211)",
+            },
+          ]
+        }
+      >
+        Password
+      </Text>
+      <TextInput
+        placeholder=""
+        secureTextEntry={true}
+        style={
+          [
+            {
+              "borderBottomColor": "rgb(211,211,211)",
+              "borderBottomWidth": 1,
+              "height": 30,
+              "width": "100%",
+            },
+            {
+              "borderBottomWidth": 0,
+            },
+          ]
+        }
+      />
+    </View>
+    <Text
+      allowFontScaling={false}
+      onPress={[Function]}
+      selectable={false}
+      style={
+        [
+          {
+            "color": "rgb(182,182,182)",
+            "fontSize": 20,
+          },
+          {
+            "alignSelf": "center",
+            "width": "10%",
+          },
+          {
+            "fontFamily": "Entypo",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          {},
+        ]
+      }
+    >
+      
+    </Text>
   </View>
 </View>
 `;
