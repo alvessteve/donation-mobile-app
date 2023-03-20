@@ -1,7 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Login Page Rendering should display the page 1`] = `
-<Text>
-  HELLO
-</Text>
+<View
+  style={
+    {
+      "backgroundColor": "white",
+      "flex": 1,
+      "padding": 30,
+    }
+  }
+>
+  <View>
+    <Text
+      style={
+        [
+          {
+            "color": "rgb(0,0,0)",
+            "fontSize": 14,
+          },
+          {
+            "color": "rgb(211,211,211)",
+          },
+        ]
+      }
+    >
+      Email
+    </Text>
+    <TextInput
+      placeholder=""
+      style={
+        {
+          "borderBottomColor": "rgb(211,211,211)",
+          "borderBottomWidth": 1,
+          "height": 40,
+          "width": "100%",
+        }
+      }
+    />
+  </View>
+</View>
 `;

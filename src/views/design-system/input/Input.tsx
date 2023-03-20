@@ -1,8 +1,34 @@
 import React from 'react';
-import { TextInput as RNTextInput } from 'react-native';
+import { View, TextInput as RNTextInput, StyleSheet } from 'react-native';
+import Typography from '../typography/Typography';
+import { useTheme } from '../theme/ThemeContext';
+import { Theme } from '../theme/stylesheet';
 
-export default function Input({ placeholder } : { placeholder: string }) {
+const InputStyle = (theme: Theme) => StyleSheet.create({
+  label: {
+    color: theme.palette.lightgray,
+  },
+  input: {
+    height: 40,
+    width: '100%',
+    borderBottomColor: theme.palette.lightgray,
+    borderBottomWidth: 1,
+  },
+});
+
+type InputType = {
+  placeholder?: string
+};
+
+export default function Input({ placeholder = '' } : InputType) {
+  const theme = useTheme();
   return (
-    <RNTextInput placeholder={placeholder} />
+    <View>
+      <Typography style={InputStyle(theme).label}>Email</Typography>
+      <RNTextInput
+        style={InputStyle(theme).input}
+        placeholder={placeholder}
+      />
+    </View>
   );
 }

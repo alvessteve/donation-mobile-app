@@ -1,8 +1,11 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { View } from 'react-native';
+import Input from '../../design-system/input/Input';
 
 export default function LoginScreen() {
   return (
-    <Text>HELLO</Text>
+    <View style={{ backgroundColor: 'white', flex: 1, padding: 30 }}>
+      <Input />
+    </View>
   );
 }
