@@ -122,6 +122,7 @@ exports[`Login Page Rendering should display the page 1`] = `
     </Text>
   </View>
   <Text
+    onPress={[Function]}
     style={
       [
         {

@@ -11,7 +11,7 @@ export default function LoginScreen() {
     <View style={{ backgroundColor: 'white', flex: 1, padding: 30 }}>
       <Input label={<Translation id="login.email.label" />} />
       <PasswordInput />
-      <Link label="Forgot Password?" />
+      <Link onPress={() => {}} label="Forgot Password?" />
       <Button variant="secondary" title="Log in" onPress={() => {}} />
     </View>
   );

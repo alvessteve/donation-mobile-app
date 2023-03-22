@@ -12,12 +12,19 @@ const LinkStyle = (theme : Theme) => StyleSheet.create({
 });
 
 type LinkType = {
+  onPress: () => void
   label: string
 };
 
-export default function Link({ label } : LinkType) {
+export default function Link({ label, onPress } : LinkType) {
   const theme = useTheme();
   return (
-    <Typography type="h2" style={LinkStyle(theme).typo}>{label}</Typography>
+    <Typography
+      onPress={onPress}
+      type="h2"
+      style={LinkStyle(theme).typo}
+    >
+      {label}
+    </Typography>
   );
 }
