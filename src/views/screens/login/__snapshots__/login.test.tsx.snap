@@ -14,6 +14,8 @@ exports[`Login Page Rendering should display the page 1`] = `
     style={{}}
   >
     <Text
+      disabled={true}
+      onPress={[Function]}
       style={
         [
           {
@@ -62,6 +64,8 @@ exports[`Login Page Rendering should display the page 1`] = `
       }
     >
       <Text
+        disabled={true}
+        onPress={[Function]}
         style={
           [
             {
@@ -122,6 +126,7 @@ exports[`Login Page Rendering should display the page 1`] = `
     </Text>
   </View>
   <Text
+    disabled={false}
     onPress={[Function]}
     style={
       [
@@ -182,8 +187,11 @@ exports[`Login Page Rendering should display the page 1`] = `
         {},
       ]
     }
+    testID="Button"
   >
     <Text
+      disabled={true}
+      onPress={[Function]}
       style={
         [
           {

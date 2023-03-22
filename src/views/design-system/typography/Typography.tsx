@@ -24,15 +24,16 @@ type TypographyType = {
   children: ReactNode,
   onPress?: () => void,
   type?: Extract<FontKeys, 'h1' | 'h2' | 'p'>,
-  style?: StyleProp<TextStyle>
+  style?: StyleProp<TextStyle>,
+  disabled?: boolean
 };
 
 export default function Typography({
-  children, onPress = () => {}, type = 'p', style = {},
+  children, onPress = () => {}, type = 'p', style = {}, disabled = true,
 }: TypographyType) {
   const theme = useTheme();
   return (
-    <Text onPress={onPress} style={[TypographyStyle(theme)[type!], style]}>
+    <Text disabled={disabled} onPress={onPress} style={[TypographyStyle(theme)[type!], style]}>
       {children}
     </Text>
   );

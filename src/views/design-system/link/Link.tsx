@@ -23,6 +23,7 @@ export default function Link({ label, onPress } : LinkType) {
       onPress={onPress}
       type="h2"
       style={LinkStyle(theme).typo}
+      disabled={false}
     >
       {label}
     </Typography>

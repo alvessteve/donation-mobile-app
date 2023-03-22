@@ -34,8 +34,10 @@ export default function Button({
   const theme = useTheme();
   return (
     <Pressable
+      testID="Button"
       onPress={onPress}
       style={({ pressed }) => [ButtonStyle(theme, variant!, pressed).container, style]}
+      android_disableSound
     >
       <Typography type="h2" style={ButtonStyle(theme, variant!).label}>
         {title}

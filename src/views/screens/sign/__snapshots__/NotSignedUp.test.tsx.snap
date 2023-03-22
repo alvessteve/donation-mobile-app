@@ -17,6 +17,7 @@ exports[`NotSignedUp Page Rendering should display the page 1`] = `
     }
   >
     <Text
+      disabled={true}
       onPress={[Function]}
       style={
         [
@@ -33,6 +34,7 @@ exports[`NotSignedUp Page Rendering should display the page 1`] = `
       Help contribute to impactful organisations
     </Text>
     <Text
+      disabled={true}
       onPress={[Function]}
       style={
         [
@@ -105,8 +107,11 @@ exports[`NotSignedUp Page Rendering should display the page 1`] = `
           },
         ]
       }
+      testID="Button"
     >
       <Text
+        disabled={true}
+        onPress={[Function]}
         style={
           [
             {
@@ -169,8 +174,11 @@ exports[`NotSignedUp Page Rendering should display the page 1`] = `
           },
         ]
       }
+      testID="Button"
     >
       <Text
+        disabled={true}
+        onPress={[Function]}
         style={
           [
             {
