@@ -15,6 +15,7 @@ module.exports = {
           functions: 'defaultArguments',
         }],
         'jest-dom/prefer-in-document': 'off',
+        'jsx-a11y/anchor-is-valid': 'off',
       },
     },
   ],

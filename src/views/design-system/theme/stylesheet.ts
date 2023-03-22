@@ -6,7 +6,14 @@
  type NumberRange = Mapped<RgbUpperLimit>[number];
  */
 export type ColorValueRgbType = `rgb(${number},${number},${number})`;
-type ColorNames = 'curiousBlue' | 'nobel' | 'viking' | 'white' | 'black' | 'lightgray' | 'mediumLightGray';
+type ColorNames = 'curiousBlue'
+| 'nobel'
+| 'viking'
+| 'white'
+| 'black'
+| 'lightgray'
+| 'mediumLightGray'
+| 'bittersweet';
 type ColorPaletteType = Record<ColorNames, ColorValueRgbType>;
 
 type SizeKeys = 'extraSmall' | 'small' | 'medium' | 'large' | 'extraLarge';
@@ -36,6 +43,7 @@ export const colorPalette: ColorPaletteType = {
   black: 'rgb(0,0,0)',
   lightgray: 'rgb(211,211,211)',
   mediumLightGray: 'rgb(182,182,182)',
+  bittersweet: 'rgb(250,102,94)',
 };
 
 // act as a source of truth for the type to not have to declare each elements
