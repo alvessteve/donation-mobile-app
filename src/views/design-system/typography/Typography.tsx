@@ -22,13 +22,13 @@ const TypographyStyle = (theme: Theme) => StyleSheet.create({
 
 type TypographyType = {
   children: ReactNode,
-  onPress: () => void,
+  onPress?: () => void,
   type?: Extract<FontKeys, 'h1' | 'h2' | 'p'>,
   style?: StyleProp<TextStyle>
 };
 
 export default function Typography({
-  children, onPress, type = 'p', style = {},
+  children, onPress = () => {}, type = 'p', style = {},
 }: TypographyType) {
   const theme = useTheme();
   return (

@@ -1,4 +1,4 @@
-import { Equal, ExpectFalse, ExpectTrue } from '../../../tests/type-utils';
+import { Equal, ExpectFalse, ExpectTrue } from '../testing/type-utils';
 import { Translations } from './Translations';
 
 const translations = {
