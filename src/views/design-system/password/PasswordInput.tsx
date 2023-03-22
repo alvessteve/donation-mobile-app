@@ -43,6 +43,7 @@ export default function PasswordInput({ placeholder = '' } : PasswordInputType) 
         secureTextEntry={showPassword}
       />
       <Icon
+        accessibilityHint="showPasswordIcon"
         style={PasswordInputStyle(theme).icon}
         name={showPassword ? 'eye-with-line' : 'eye'}
         size={20}
