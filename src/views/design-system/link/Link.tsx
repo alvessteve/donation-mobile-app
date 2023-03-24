@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { StyleSheet } from 'react-native';
 import Typography from '../typography/Typography';
 import { useTheme } from '../theme/ThemeContext';
@@ -13,10 +13,10 @@ const LinkStyle = (theme : Theme) => StyleSheet.create({
 
 type LinkType = {
   onPress: () => void
-  label: string
+  label: ReactNode
 };
 
-export default function Link({ label, onPress } : LinkType) {
+export default function Link({ onPress, label } : LinkType) {
   const theme = useTheme();
   return (
     <Typography

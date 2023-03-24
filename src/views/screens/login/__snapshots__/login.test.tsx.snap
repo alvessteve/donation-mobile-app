@@ -4,64 +4,21 @@ exports[`Login Page Rendering should display the page 1`] = `
 <View
   style={
     {
-      "backgroundColor": "white",
+      "backgroundColor": "rgb(255,255,255)",
       "flex": 1,
       "padding": 30,
     }
   }
 >
   <View
-    style={{}}
-  >
-    <Text
-      disabled={true}
-      onPress={[Function]}
-      style={
-        [
-          {
-            "color": "rgb(0,0,0)",
-            "fontSize": 14,
-          },
-          {
-            "color": "rgb(211,211,211)",
-          },
-        ]
-      }
-    >
-      Email
-    </Text>
-    <TextInput
-      placeholder=""
-      secureTextEntry={false}
-      style={
-        [
-          {
-            "borderBottomColor": "rgb(211,211,211)",
-            "borderBottomWidth": 1,
-            "height": 30,
-            "width": "100%",
-          },
-          {},
-        ]
-      }
-    />
-  </View>
-  <View
     style={
       {
-        "borderBottomColor": "rgb(211,211,211)",
-        "borderBottomWidth": 1,
-        "flexDirection": "row",
-        "width": "100%",
+        "flex": 4,
       }
     }
   >
     <View
-      style={
-        {
-          "width": "90%",
-        }
-      }
+      style={{}}
     >
       <Text
         disabled={true}
@@ -78,11 +35,11 @@ exports[`Login Page Rendering should display the page 1`] = `
           ]
         }
       >
-        Password
+        Email
       </Text>
       <TextInput
         placeholder=""
-        secureTextEntry={true}
+        secureTextEntry={false}
         style={
           [
             {
@@ -91,103 +48,184 @@ exports[`Login Page Rendering should display the page 1`] = `
               "height": 30,
               "width": "100%",
             },
-            {
-              "borderBottomWidth": 0,
-            },
+            {},
           ]
         }
       />
     </View>
+    <View
+      style={
+        {
+          "borderBottomColor": "rgb(211,211,211)",
+          "borderBottomWidth": 1,
+          "flexDirection": "row",
+          "width": "100%",
+        }
+      }
+    >
+      <View
+        style={
+          {
+            "width": "90%",
+          }
+        }
+      >
+        <Text
+          disabled={true}
+          onPress={[Function]}
+          style={
+            [
+              {
+                "color": "rgb(0,0,0)",
+                "fontSize": 14,
+              },
+              {
+                "color": "rgb(211,211,211)",
+              },
+            ]
+          }
+        >
+          Password
+        </Text>
+        <TextInput
+          placeholder=""
+          secureTextEntry={true}
+          style={
+            [
+              {
+                "borderBottomColor": "rgb(211,211,211)",
+                "borderBottomWidth": 1,
+                "height": 30,
+                "width": "100%",
+              },
+              {
+                "borderBottomWidth": 0,
+              },
+            ]
+          }
+        />
+      </View>
+      <Text
+        accessibilityHint="showPasswordIcon"
+        allowFontScaling={false}
+        onPress={[Function]}
+        selectable={false}
+        style={
+          [
+            {
+              "color": "rgb(182,182,182)",
+              "fontSize": 20,
+            },
+            {
+              "alignSelf": "center",
+              "width": "10%",
+            },
+            {
+              "fontFamily": "Entypo",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            {},
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
     <Text
-      accessibilityHint="showPasswordIcon"
-      allowFontScaling={false}
+      disabled={false}
       onPress={[Function]}
-      selectable={false}
       style={
         [
           {
-            "color": "rgb(182,182,182)",
-            "fontSize": 20,
+            "color": "rgb(155,155,155)",
+            "fontSize": 16,
           },
           {
-            "alignSelf": "center",
-            "width": "10%",
+            "color": "rgb(250,102,94)",
+            "textDecorationLine": "underline",
           },
+        ]
+      }
+    >
+      Forgot password?
+    </Text>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        [
           {
-            "fontFamily": "Entypo",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
+            "alignItems": "center",
+            "backgroundColor": "rgb(75,192,185)",
+            "borderColor": "rgb(255,255,255)",
+            "borderRadius": 10,
+            "borderWidth": 1,
+            "height": 50,
+            "justifyContent": "center",
           },
           {},
         ]
       }
+      testID="Button"
     >
-      
-    </Text>
+      <Text
+        disabled={true}
+        onPress={[Function]}
+        style={
+          [
+            {
+              "color": "rgb(155,155,155)",
+              "fontSize": 16,
+            },
+            {
+              "color": "rgb(255,255,255)",
+            },
+          ]
+        }
+      >
+        Log in
+      </Text>
+    </View>
   </View>
-  <Text
-    disabled={false}
-    onPress={[Function]}
-    style={
-      [
-        {
-          "color": "rgb(155,155,155)",
-          "fontSize": 16,
-        },
-        {
-          "color": "rgb(250,102,94)",
-          "textDecorationLine": "underline",
-        },
-      ]
-    }
-  >
-    Forgot Password?
-  </Text>
   <View
-    accessibilityState={
-      {
-        "busy": undefined,
-        "checked": undefined,
-        "disabled": undefined,
-        "expanded": undefined,
-        "selected": undefined,
-      }
-    }
-    accessibilityValue={
-      {
-        "max": undefined,
-        "min": undefined,
-        "now": undefined,
-        "text": undefined,
-      }
-    }
-    accessible={true}
-    collapsable={false}
-    focusable={true}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
     style={
-      [
-        {
-          "alignItems": "center",
-          "backgroundColor": "rgb(75,192,185)",
-          "borderColor": "rgb(255,255,255)",
-          "borderRadius": 10,
-          "borderWidth": 1,
-          "height": 50,
-          "justifyContent": "center",
-        },
-        {},
-      ]
+      {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "borderTopColor": "rgb(211,211,211)",
+        "borderTopWidth": 1,
+        "flex": 1,
+        "flexDirection": "row",
+      }
     }
-    testID="Button"
   >
     <Text
       disabled={true}
@@ -198,13 +236,29 @@ exports[`Login Page Rendering should display the page 1`] = `
             "color": "rgb(155,155,155)",
             "fontSize": 16,
           },
+          {},
+        ]
+      }
+    >
+      Don't have an account?
+    </Text>
+    <Text
+      disabled={false}
+      onPress={[Function]}
+      style={
+        [
           {
-            "color": "rgb(255,255,255)",
+            "color": "rgb(155,155,155)",
+            "fontSize": 16,
+          },
+          {
+            "color": "rgb(250,102,94)",
+            "textDecorationLine": "underline",
           },
         ]
       }
     >
-      Log in
+      Sign up
     </Text>
   </View>
 </View>
