@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, ReactNode } from 'react';
 import { FormattedMessage, IntlProvider as BaseIntlProvider, useIntl as useBaseIntl } from 'react-intl';
 import { FormatXMLElementFn, PrimitiveType } from 'intl-messageformat';
 import { englishTranslations, Translations, TranslationsKeys } from './Translations';
@@ -25,6 +25,6 @@ export default function IntlProvider(
   );
 }
 
-export function Translation({ id, values = {} }: { id: TranslationsKeys, values?: Record<string, string> }) {
+export function Translation({ id, values = {} }: { id: TranslationsKeys, values?: Record<string, string | FormatXMLElementFn<ReactNode, ReactNode>> }) {
   return <FormattedMessage id={id} values={values} />;
 }

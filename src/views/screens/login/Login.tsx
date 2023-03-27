@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { View } from 'react-native';
 import Input from '../../design-system/input/Input';
 import PasswordInput from '../../design-system/password/PasswordInput';
@@ -9,6 +9,8 @@ import Typography from '../../design-system/typography/Typography';
 import { useTheme } from '../../design-system/theme/ThemeContext';
 
 export default function LoginScreen() {
+  const link = (label: ReactNode) => <Link label={label} onPress={() => { console.log('Link sign up clicked'); }} />;
+
   const theme = useTheme();
   return (
     <View style={{ backgroundColor: theme.palette.white, flex: 1, padding: 30 }}>
@@ -27,8 +29,7 @@ export default function LoginScreen() {
         borderTopWidth: 1,
       }}
       >
-        <Typography type="h2"><Translation id="login.signup.text" /></Typography>
-        <Link onPress={() => {}} label={<Translation id="login.signup.label" />} />
+        <Typography type="h2"><Translation id="login.signup.text" values={{ link }} /></Typography>
       </View>
     </View>
   );

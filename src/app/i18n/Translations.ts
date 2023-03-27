@@ -12,6 +12,5 @@ export const englishTranslations = {
   'login.email.label': 'Email',
   'login.password.label': 'Password',
   'login.link.password': 'Forgot password?',
-  'login.signup.text': 'Don\'t have an account?',
-  'login.signup.label': 'Sign up',
+  'login.signup.text': 'Don\'t have an account? <link>Sign up</link>',
 };

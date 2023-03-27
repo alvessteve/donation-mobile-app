@@ -240,25 +240,25 @@ exports[`Login Page Rendering should display the page 1`] = `
         ]
       }
     >
-      Don't have an account?
-    </Text>
-    <Text
-      disabled={false}
-      onPress={[Function]}
-      style={
-        [
-          {
-            "color": "rgb(155,155,155)",
-            "fontSize": 16,
-          },
-          {
-            "color": "rgb(250,102,94)",
-            "textDecorationLine": "underline",
-          },
-        ]
-      }
-    >
-      Sign up
+      Don't have an account? 
+      <Text
+        disabled={false}
+        onPress={[Function]}
+        style={
+          [
+            {
+              "color": "rgb(155,155,155)",
+              "fontSize": 16,
+            },
+            {
+              "color": "rgb(250,102,94)",
+              "textDecorationLine": "underline",
+            },
+          ]
+        }
+      >
+        Sign up
+      </Text>
     </Text>
   </View>
 </View>
