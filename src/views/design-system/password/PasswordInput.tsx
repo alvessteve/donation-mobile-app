@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { StyleSheet, View } from 'react-native';
+import {
+  StyleProp, StyleSheet, View, ViewStyle,
+} from 'react-native';
 import Icon from 'react-native-vector-icons/Entypo';
 import Input from '../input/Input';
 import { useTheme } from '../theme/ThemeContext';
@@ -27,14 +29,15 @@ const PasswordInputStyle = (theme: Theme) => StyleSheet.create({
 
 type PasswordInputType = {
   placeholder? : string
+  style?: StyleProp<ViewStyle>
 };
 
-export default function PasswordInput({ placeholder = '' } : PasswordInputType) {
+export default function PasswordInput({ placeholder = '', style = {} } : PasswordInputType) {
   const [showPassword, setShowPassword] = useState<boolean>(true);
 
   const theme = useTheme();
   return (
-    <View style={PasswordInputStyle(theme).container}>
+    <View style={[PasswordInputStyle(theme).container, style]}>
       <Input
         placeholder={placeholder}
         containerStyle={PasswordInputStyle(theme).inputContainer}

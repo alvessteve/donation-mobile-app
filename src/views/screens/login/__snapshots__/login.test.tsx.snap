@@ -18,7 +18,11 @@ exports[`Login Page Rendering should display the page 1`] = `
     }
   >
     <View
-      style={{}}
+      style={
+        {
+          "marginBottom": 30,
+        }
+      }
     >
       <Text
         disabled={true}
@@ -55,12 +59,17 @@ exports[`Login Page Rendering should display the page 1`] = `
     </View>
     <View
       style={
-        {
-          "borderBottomColor": "rgb(211,211,211)",
-          "borderBottomWidth": 1,
-          "flexDirection": "row",
-          "width": "100%",
-        }
+        [
+          {
+            "borderBottomColor": "rgb(211,211,211)",
+            "borderBottomWidth": 1,
+            "flexDirection": "row",
+            "width": "100%",
+          },
+          {
+            "marginBottom": 30,
+          },
+        ]
       }
     >
       <View
@@ -141,10 +150,15 @@ exports[`Login Page Rendering should display the page 1`] = `
             "color": "rgb(155,155,155)",
             "fontSize": 16,
           },
-          {
-            "color": "rgb(250,102,94)",
-            "textDecorationLine": "underline",
-          },
+          [
+            {
+              "color": "rgb(250,102,94)",
+              "textDecorationLine": "underline",
+            },
+            {
+              "marginBottom": 50,
+            },
+          ],
         ]
       }
     >
@@ -250,10 +264,13 @@ exports[`Login Page Rendering should display the page 1`] = `
               "color": "rgb(155,155,155)",
               "fontSize": 16,
             },
-            {
-              "color": "rgb(250,102,94)",
-              "textDecorationLine": "underline",
-            },
+            [
+              {
+                "color": "rgb(250,102,94)",
+                "textDecorationLine": "underline",
+              },
+              {},
+            ],
           ]
         }
       >
